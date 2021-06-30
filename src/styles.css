@@ -190,7 +190,7 @@ input::focus {
   flex-flow: column;
 }
 .course.coding {
-  background: url(../assets/coding.jpg) no-repeat center center;
+  background: url(https://images.unsplash.com/photo-1537884944318-390069bb8665?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80) no-repeat center center;
   background-size: cover;
 }
 .course.art {
