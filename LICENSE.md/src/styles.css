@@ -1,0 +1,317 @@
+@import url();
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background: #ddd9e9;
+  display: flex;
+  flex-flow: column;
+  font-family: sans-serif;
+  scroll-snap-type: y mandatory;
+}
+
+.sec1,
+.sec2,
+.sec-3 {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+footer {
+  width: 100%;
+  background: #e0e7e0;
+  margin-top: auto;
+  padding: 1.6rem 0 1.2rem;
+  text-align: center;
+}
+
+#main-header {
+  background: #fff;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sub-header {
+  color: #2773ca;
+}
+.logo {
+  border-radius: 10px;
+  max-width: 100px;
+  margin-left: 1rem;
+}
+@media only screen and (min-width: 900px) {
+  .logo {
+    max-width: 200px;
+  }
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.nav-bar li:not(first-child) {
+  margin: 0 1rem 0 1rem;
+}
+.home,
+.about {
+  color: rgba(0, 0, 0, 0.9);
+}
+.home:hover,
+.about:hover {
+  color: #2773ca;
+}
+.register {
+  transition: background 0.5s linear;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 0.5rem 0.4rem;
+  border-radius: 4px;
+}
+.register:hover {
+  background: #2773ca;
+}
+.register a {
+  color: #fff;
+}
+.nav-bar li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+.sh {
+  color: #121212;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 900;
+  padding: 1rem 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.call-out {
+  height: 80vh;
+  animation: 2s ease-out 1s 1 slideInFromLeft;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  border-bottom: 4px solid #fff;
+  border-top: 4px solid #e0e0e0;
+
+  background: #f3eeee;
+  background: url(../assets/learn.jpg) no-repeat center center;
+  background-size: cover;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+input {
+  outline: none;
+  color: #2773ca;
+  margin: 10px 0;
+  font-size: 14px;
+  padding: 0.9rem 0.3rem;
+}
+
+input::focus {
+  outline: none;
+}
+
+.sub-btn {
+  border: none;
+  background: #5e8de4;
+  outline: none;
+  padding: 1rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5px;
+}
+.sub-btn:hover {
+  background: #2773ca;
+  cursor: pointer;
+}
+
+.cr-header,
+.team-h {
+  text-align: center;
+  padding-top: 0.8rem;
+  color: #2d445c;
+}
+.courses,
+.our-team {
+  font-size: 34px;
+  padding-top: 0.5rem;
+  color: #2d445c;
+}
+.sep {
+  padding: 1rem 0rem;
+  width: 55%;
+  margin: 0 auto;
+  border-bottom: 1px solid #111;
+}
+.course-box {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.3rem 0;
+  margin: 1rem 0;
+  animation: 2s ease-out 1s 1 courseAnimation;
+}
+@keyframes courseAnimation {
+  0% {
+    transform: translateY(-30%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.course {
+  border: 1px solid #111;
+  margin: 0.2rem 0.4rem;
+  width: 250px;
+  height: 170px;
+  background: #8e99a5;
+
+  display: flex;
+  flex-flow: column;
+}
+.course.coding {
+  background: url(../assets/coding.jpg) no-repeat center;
+  background-size: cover;
+}
+.course.art {
+  background: url(../assets/art.jpg) no-repeat center;
+  background-size: cover;
+}
+.course.design {
+  background: url(../assets/design.jpg) no-repeat center center;
+  background-size: cover;
+}
+.course.business {
+  background: url(../assets/buz.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.course.lang {
+  background: url(../assets/lang.jpg) no-repeat center center;
+  background-size: cover;
+}
+.course.bots {
+  background: url(../assets/robotics.jpg) no-repeat center center;
+  background-size: cover;
+}
+.course-title {
+  background: #fff;
+  text-align: center;
+  padding: 0.4rem 0;
+  transition: background 0.3s linear;
+  border-bottom: 1px solid #111;
+}
+.course-title:hover {
+  cursor: pointer;
+  background: #2d445c;
+  color: #fff;
+}
+.cr-btn {
+  width: 50%;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.2rem 0.3rem;
+  margin-top: auto;
+  border: 1px solid #fff;
+  transition: background 0.5s linear;
+}
+
+.cr-btn:hover {
+  background: #2d445c;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.sec-2, .sec-3 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 65%;
+  padding: 0.3rem 0;
+  padding: .04rem;
+}
+
+@media only screen and (max-width: 780px) {
+  .team-box {
+    width: 90%;
+  }
+}
+
+.member {
+  border: 1px solid #111;
+  margin: 0.3rem 0.4rem;
+  width: 200px;
+  background: #8e99a5;
+
+  padding: 0.4rem;
+
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  margin: 0.2rem;
+  background: url(https://i.pravatar.cc/300) no-repeat center center;
+  background-size: cover;
+  border: 2px solid #2d445c;
+}
+
+.description {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.about {
+  background: #eee;
+  padding: 0.2rem;
+}
+.title {
+  padding: 1rem;
+  text-align: center;
+}
+
+.about {
+  text-align: justify;
+}
